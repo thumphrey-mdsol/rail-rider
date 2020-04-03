@@ -1,10 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 const LoginForm = (props) => {
 return(
-    <View>
-        <TextInput/>
+    <View style={styles.container}>
+        <TextInput placeholder="Username"
+        style={styles.input}/>
+        <TextInput placeholder="Password"
+        style={styles.input}/>
+        <Button title="Login"/>
     </View>
 )
 }
@@ -19,6 +23,13 @@ const styles = StyleSheet.create({
     },
     input: {
         width: 300,
-        border: 'grey' 2
+        borderColor: 'grey',
+        borderRadius: 15,
+        backgroundColor: "lightgrey",
+        paddingHorizontal:16,
+        fontSize: 16,
+        color: "#ffffff",
+        paddingVertical: 6,
+        marginVertical: 10
     }
 })
